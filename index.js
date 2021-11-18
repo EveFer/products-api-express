@@ -10,6 +10,12 @@ const server = app.listen(PORT, () => {
     console.log(`Server corriendo en el puerto ${PORT}`)
 })
 
+app.get('/', (req, res) => {
+    res.send({
+        welcome: 'Hi!! ^^'
+    })
+})
+
 
 app.get('/products', async (req, res) => {
     try {
